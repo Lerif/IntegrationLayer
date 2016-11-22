@@ -6,7 +6,23 @@
 </head>
 <body>
 
-<h1>Yes	</h1>
+	<h1>Silencio !</h1>
 
+	<form action="http://localhost:8080/RestDum/rest/prod/setar" id="forms" method="post">
+		<fieldset>
+			<legend> Geladeira </legend>
+			Marca: <input type="text" name="marca" id="marca"/> 
+			Modelo: <input type="text" name="modelo" id="modelo"/> 
+			<input type="submit" value="Enviar" />
+		</fieldset>
+
+	</form>
 </body>
+<script type="text/javascript">
+
+	function enviarGela(){
+		document.getElementById("forms").submit();
+	}
+
+</script>
 </html>
