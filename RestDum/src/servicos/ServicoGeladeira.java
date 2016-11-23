@@ -17,8 +17,19 @@ public class ServicoGeladeira {
 		return geladeira;
 	}
 	
+	public Geladeira inserirGeladeiraDB(String marca, String modelo){
+		Geladeira geladeira = fabricaGeladeira.criarGeladeira(marca, modelo);
+		repositorioGeladeira.inserirGeladeiraBD(geladeira);
+		return geladeira;
+	}
+	
+	
 	public List<Geladeira> buscarTodasGeladeiras(){
 		return repositorioGeladeira.buscarTodasGeladeiras();
+	}
+	
+	public List<Geladeira> buscarTodasGeladeirasDB(){
+		return repositorioGeladeira.buscarTodasGeladeirasBD();
 	}
 
 }
